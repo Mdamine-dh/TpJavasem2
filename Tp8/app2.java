@@ -9,7 +9,8 @@ public class app2 {
         i=ch.indexOf(" ");
         if (i==-1){
             s=ch;
-        } 
+        }
+       
         else{
             s=ch.substring(0,i);
         }

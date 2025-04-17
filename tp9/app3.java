@@ -18,6 +18,7 @@ public class app3 {
             if(i==0||ch1.charAt(i-1)==' '){
                 a=ch1.charAt(i);
                 ch1.setCharAt(i, Character.toUpperCase(a));
+                 
             }
             i=j;
         }

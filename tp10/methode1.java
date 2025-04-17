@@ -15,7 +15,7 @@ public class methode1 {
             }
             n = scanner.nextInt();
             if (n <= 0) {
-                System.out.println("Erreur : L'entier doit être strictement positif.");
+                System.out.println("Erreur : L'entier doit être strictement positif.");²
             }
         } while (n <= 0);
 
