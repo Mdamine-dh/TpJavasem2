@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class methode1 {
     
-    // Méthode pour lire un entier strictement positif
+    // Methode pour lire un entier strictement positif
     public static int lectureN() {
         Scanner scanner = new Scanner(System.in);
         int n;
@@ -15,7 +15,7 @@ public class methode1 {
             }
             n = scanner.nextInt();
             if (n <= 0) {
-                System.out.println("Erreur : L'entier doit être strictement positif.");²
+                System.out.println("Erreur : L'entier doit etre strictement positif.");
             }
         } while (n <= 0);
 
@@ -24,17 +24,17 @@ public class methode1 {
     }
    
 
-    // Méthode pour compter le nombre de chiffres d'un entier
+    // Methode pour compter le nombre de chiffres d'un entier
     public static int Compter(int n) {
         return String.valueOf(n).length();
     }
 
-      // Méthode pour vérifier si un nombre est pair
+      // Methode pour verifier si un nombre est pair
     public static boolean EstPair(int n) {
         return n % 2 == 0;
     }
     
-    // Méthode pour calculer la somme des n premiers carrés
+    // Methode pour calculer la somme des n premiers carres
     public static int calculeSomme(int n) {
         int somme = 0;
         for (int i = 1; i <= n; i++) {
@@ -44,16 +44,16 @@ public class methode1 {
   
     }
    
- // Méthode pour s'assurer que le nombre est inférieur à 1000
+ // Methode pour s'assurer que le nombre est inferieur a 1000
     public static int verifierNombre(int n) {
         while (n >= 1000) {
-            System.out.println("Entrez un nombre inférieur à 1000");
+            System.out.println("Entrez un nombre inferieur a 1000");
             n = lectureN(); 
         }
         return n; 
     }
 
-    // Méthode pour vérifier si un nombre est un nombre d'Armstrong
+    // Methode pour varifier si un nombre est un nombre d'Armstrong
     public static boolean estArmstrong(int n) {
         int original = n;
         int somme = 0;

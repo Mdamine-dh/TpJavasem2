@@ -185,5 +185,43 @@ public static void RemplirTAb(int[] tab, Scanner scanner) {
  	for(int j=0;j<M[i].length;j++){
  		somme+=M[i][j];}
  	return somme;	
- 	
- }}
+ }
+
+
+  public static int Somme_rec(int n) {
+        if (n == 1)
+            return 1;
+        return n + Somme_rec(n - 1);
+    }
+   public static int Factoriel_rec(int n) {
+        if (n == 1)
+            return 1;
+        return n * Factoriel_rec(n - 1);
+    }
+       static boolean EstPremier_rec(int n, int div) {
+        if (n < 2) return false;
+        if (div == 1) return true;
+        if (n % div == 0) return false;
+        return EstPremier_rec(n, div - 1);
+    }
+        static boolean Palindrome_rec(String ch, int start, int end) {
+        if (start >= end)
+            return true;
+        if (ch.charAt(start) != ch.charAt(end))
+            return false;
+        return Palindrome_rec(ch, start + 1, end - 1);
+    }
+    public static String LectureC() {
+        Scanner sc = new Scanner(System.in);
+        String ch;
+        do {
+            System.out.print("Entrez une chaîne (max 30 caractères) : ");
+            ch = sc.nextLine();
+        } while (ch.length() > 30);
+        return ch;
+    }
+
+
+}
+
+
