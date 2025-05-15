@@ -198,13 +198,13 @@ public static void RemplirTAb(int[] tab, Scanner scanner) {
             return 1;
         return n * Factoriel_rec(n - 1);
     }
-       static boolean EstPremier_rec(int n, int div) {
+      public static boolean EstPremier_rec(int n, int div) {
         if (n < 2) return false;
         if (div == 1) return true;
         if (n % div == 0) return false;
         return EstPremier_rec(n, div - 1);
     }
-        static boolean Palindrome_rec(String ch, int start, int end) {
+       public static boolean Palindrome_rec(String ch, int start, int end) {
         if (start >= end)
             return true;
         if (ch.charAt(start) != ch.charAt(end))
@@ -215,7 +215,7 @@ public static void RemplirTAb(int[] tab, Scanner scanner) {
         Scanner sc = new Scanner(System.in);
         String ch;
         do {
-            System.out.print("Entrez une chaîne (max 30 caractères) : ");
+            System.out.print("Entrez une chaîne : ");
             ch = sc.nextLine();
         } while (ch.length() > 30);
         return ch;
