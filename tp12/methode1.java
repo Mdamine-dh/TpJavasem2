@@ -217,8 +217,25 @@ public static void RemplirTAb(int[] tab, Scanner scanner) {
         do {
             System.out.print("Entrez une chaîne : ");
             ch = sc.nextLine();
-        } while (ch.length() > 30);
-        return ch;
+        } while (ch.length() > 50);
+        return ch;}
+        public static int Nbr_Occ_rec(String mot, char a,int i){
+            if(i==mot.length()){
+                return 0;}
+            if(mot.charAt(i)==a){
+                return 1+Nbr_Occ_rec(mot, a, i+1);
+
+            }else{
+                return Nbr_Occ_rec(mot, a, i+1);
+            }    
+        
+        }
+
+        public static int sommeTab_rec(int[] tab ,int i){
+            if (i==tab.length) {
+                return 0;
+            }
+            return tab[i]+sommeTab_rec(tab,i+1);
     }
 
 
