@@ -85,6 +85,19 @@ public static void RemplirTAb(int[] tab, Scanner scanner) {
             tab[i] = scanner.nextInt();
         }
     }
+     public static int[] tri(int[] t) {
+        int aux;
+        for (int i = 0; i < t.length - 1; i++) {
+            for (int j = i + 1; j < t.length; j++) {
+                if (t[i] > t[j]) {
+                    aux = t[i];
+                    t[i] = t[j];
+                    t[j] = aux;
+                }
+            }
+        }
+        return t;}
+
     //remplace x1 par x2
    public static void Remplacer(int[] tab, int x1, int x2) {
         for (int i = 0; i < tab.length; i++) {
@@ -98,6 +111,53 @@ public static void RemplirTAb(int[] tab, Scanner scanner) {
         for (int val : tab) {
             System.out.print(val + " ");
         }       
+    }
+     // Vérifie si le tableau est régulier (toutes les lignes ont la même taille)
+    public static boolean regulier(double[][] t) {
+        int longueur = t[0].length;
+        for (int i = 1; i < t.length; i++) {
+            if (t[i].length != longueur) {
+                return false;
+            }
+        }
+        return true;
+    }
+public static double[] sommeLignes(double[][] t) {
+        double[] res = new double[t.length];
+        for (int i = 0; i < t.length; i++) {
+            double somme = 0;
+            for (int j = 0; j < t[i].length; j++) {
+                somme += t[i][j];
+            }
+            res[i] = somme;
+        }
+        return res;
+    }
+     // Somme de deux tableaux réguliers de même taille
+    public static double[][] somme(double[][] t1, double[][] t2) {
+        if (!regulier(t1) || !regulier(t2) || t1.length != t2.length || t1[0].length != t2[0].length) {
+            return null;
+        }
+
+        double[][] res = new double[t1.length][t1[0].length];
+        for (int i = 0; i < t1.length; i++) {
+            for (int j = 0; j < t1[i].length; j++) {
+                res[i][j] = t1[i][j] + t2[i][j];
+            }
+        }
+        return res;
+    }
+  public static int maxTableau(int[] tableau) {
+        if (tableau.length == 0) {
+            throw new IllegalArgumentException("Un tableau vide n'a pas de maximum");
+        }
+        int max = tableau[0];
+        for (int i = 1; i < tableau.length; i++) {
+            if (tableau[i] > max) {
+                max = tableau[i];
+            }
+        }
+        return max;
     }
     // remplir tableau par reel
     public static void RemplirTAb(double[] notes, Scanner scanner) {
